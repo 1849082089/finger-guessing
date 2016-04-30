@@ -3,13 +3,12 @@ package cn.edu.qdu.game;
 import java.util.Scanner;
 
 public class Person extends Player{
-	String name = null;
 	String fist=null;
-	public String inputName(){
+	public void inputName(){
 		Scanner input=new Scanner(System.in);
 		System.out.println("ÇëÊäÈëÄãµÄĞÕÃû£º");
-		name=input.nextLine();
-		return name;
+		String name=input.nextLine();
+		setPlayName(name);
 	}
 	public String myFist(){
 		Scanner input=new Scanner(System.in);

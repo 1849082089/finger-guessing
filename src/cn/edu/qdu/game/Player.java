@@ -15,7 +15,7 @@ public abstract class Player {
 	public void setWinningTimes(int winningTimes) {
 		this.winningTimes = winningTimes;
 	}
-	public abstract String inputName();
+	public abstract void inputName();
 	public abstract String myFist();
 	
 

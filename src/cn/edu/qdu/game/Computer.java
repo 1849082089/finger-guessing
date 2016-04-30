@@ -5,26 +5,28 @@ import java.util.Scanner;
 
 public class Computer extends Player{
 	String fist=null;
-	String name = null;
-	public String inputName(){
+	String name=null;
+	public void inputName(){
 		Scanner input=new Scanner(System.in);
 		System.out.println("请选择对方角色（1.刘备  2.孙权  3.曹操）");
 		int a=input.nextInt();//用户输入的数字
 		switch (a) {
 		case 1:
 			name= "刘备";
+			setPlayName(name);
 			break;
 		case 2:
 			name= "孙权";
+			setPlayName(name);
 			break;
 		case 3:
 			name= "曹操";
+			setPlayName(name);
 			break;
 		default:
 			System.out.println("输入错误");
 			break;
 		}
-		return name;
 	}
 	public String myFist(){
 		Random r=new Random();

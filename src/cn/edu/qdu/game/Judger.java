@@ -24,7 +24,7 @@ public class Judger {
 		computer.inputName();
 		person.inputName();
 		
-		System.out.println(person.name+" VS "+computer.name+" 对战");
+		System.out.println(person.getPlayName()+" VS "+computer.getPlayName()+" 对战");
 	}
 	public void playGame(){
 		String yn=null;
@@ -42,7 +42,7 @@ public class Judger {
 			computer.myFist();
 			
 			System.out.println("你出拳："+person.fist);
-			System.out.println(computer.name+"出拳："+computer.fist);
+			System.out.println(computer.getPlayName()+"出拳："+computer.fist);
 			if((person.equals("剪刀")&&computer.equals("石头"))||(person.equals("石头")&&computer.equals("布"))||(person.equals("布")&&computer.equals("剪刀"))){
 				System.out.println("你输了");
 				computer.setWinningTimes(computer.getWinningTimes()+1);
@@ -60,12 +60,12 @@ public class Judger {
 		
 	}
 	public void finalResult(){
-		System.out.println(computer.name+"VS"+person.name);
+		System.out.println(computer.getPlayName()+"VS"+person.getPlayName());
 		System.out.println("对战次数： "+total);
 		System.out.println();
 		System.out.println("姓名          得分");
-		System.out.println(person.name+"    "+person.getWinningTimes());
-		System.out.println(computer.name+"    "+computer.getWinningTimes());
+		System.out.println(person.getPlayName()+"    "+person.getWinningTimes());
+		System.out.println(computer.getPlayName()+"    "+computer.getWinningTimes());
 		System.out.println();
 		if(person.getWinningTimes()>computer.getWinningTimes()){
 			
